@@ -31,10 +31,15 @@ function changeSize() {
             input = prompt("please Enter a number between 1 and 100")
         }
     }
-
-
-    removeGrid()
+    removeGrid();
     createGrid(input);
+    hovering();
+}
+
+createGrid(16);
+hovering();
+
+function hovering() {
     let cells = document.querySelectorAll(".cell")
     cells.forEach(cell => {
         cell.addEventListener('mouseenter', () => {
@@ -42,14 +47,6 @@ function changeSize() {
         });
     });
 }
-
-createGrid(16)
-let cells = document.querySelectorAll(".cell")
-cells.forEach(cell => {
-    cell.addEventListener('mouseenter', () => {
-        cell.classList.add('hoverd')
-    });
-});
 
 button.addEventListener('click', function () {
     console.log("button Clicked")
