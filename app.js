@@ -1,5 +1,6 @@
 let container = document.querySelector(".container")
 let button = document.querySelector(".changeSize")
+
 function createCell() {
     const div = document.createElement("div")
     div.classList.add('cell')
@@ -24,6 +25,14 @@ function removeGrid() {
 
 function changeSize() {
     let input = prompt("What is the size you want??")
+    while (true) {
+        if (input <= 100) break;
+        else {
+            input = prompt("please Enter a number between 1 and 100")
+        }
+    }
+
+
     removeGrid()
     createGrid(input);
     let cells = document.querySelectorAll(".cell")
