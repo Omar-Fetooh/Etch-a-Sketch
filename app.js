@@ -87,7 +87,3 @@ clearButton.addEventListener("click", () => {
     else clearColors()
 })
 
-// blackButton.addEventListener("click", () => {
-//     colorMode = 0;
-//     blackMode = 1;
-// })
