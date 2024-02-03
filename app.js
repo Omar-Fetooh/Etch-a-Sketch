@@ -1,5 +1,11 @@
 let container = document.querySelector(".container")
 let button = document.querySelector(".changeSize")
+let colorButton = document.querySelector(".colorMode")
+let clearButton = document.querySelector(".clear")
+let blackButton = document.querySelector('.blackMode')
+
+let colorMode = 0;
+let blackMode = 1;
 
 function createCell() {
     const div = document.createElement("div")
@@ -40,12 +46,30 @@ createGrid(16);
 hovering();
 
 function hovering() {
+    console.log(`colorMode=${colorMode} , blackMode=${blackMode}`)
     let cells = document.querySelectorAll(".cell")
     cells.forEach(cell => {
+        colors = ['red', 'green', 'violet', 'brown', 'darkorchid', 'pink', 'violet', 'yellow', 'orange']
+        let randomColor = colors[Math.floor(Math.random() * colors.length)]
+
         cell.addEventListener('mouseenter', () => {
-            cell.classList.add('hoverd')
+
+            if (!colorMode) cell.classList.add('hoverd')
+            else cell.style.backgroundColor = randomColor;
         });
     });
+}
+function clearBlack() {
+    let cells = document.querySelectorAll(".cell")
+    for (const cell of cells) {
+        cell.classList.remove('hoverd')
+    }
+}
+function clearColors() {
+    let cells = document.querySelectorAll(".cell")
+    for (const cell of cells) {
+        cell.style.backgroundColor = 'white'
+    }
 }
 
 button.addEventListener('click', function () {
@@ -53,5 +77,17 @@ button.addEventListener('click', function () {
     changeSize();
 });
 
+colorButton.addEventListener('click', function () {
+    colorMode = 1;
+    blackMode = 0;
+})
 
+clearButton.addEventListener("click", () => {
+    if (colorMode = 0) clearBlack()
+    else clearColors()
+})
 
+// blackButton.addEventListener("click", () => {
+//     colorMode = 0;
+//     blackMode = 1;
+// })
