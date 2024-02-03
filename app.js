@@ -85,5 +85,7 @@ colorButton.addEventListener('click', function () {
 clearButton.addEventListener("click", () => {
     if (colorMode = 0) clearBlack()
     else clearColors()
+
+    hovering()
 })
 
