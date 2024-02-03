@@ -1,4 +1,3 @@
-# Etch-a-Sketch
 
 # Etch-a-Sketch Project
 
@@ -22,7 +21,7 @@ Contributions are welcome! If you'd like to contribute to this project, please o
 This project is licensed under the MIT License - see the [LICENSE](MITLicense.md) file for details.
 
 ## Author
-- [Omar Fetooh](https://github.com/omarfetooh)
+- [Omar Fetooh](https://github.com/Omar-Fetooh)
 
 ## Acknowledgments
-Special thanks to the creators of The ODIN Project for the inspiration.
+Special thanks to the creators of <a href="https://www.theodinproject.com/">The ODIN Project</a> for the inspiration.
