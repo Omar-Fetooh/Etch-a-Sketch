@@ -3,7 +3,7 @@
 
 This project is a simple web-based implementation of the classic Etch-a-Sketch toy. Users can draw on the screen using their cursor, and there are options to change the size of the drawing area, switch between different color modes, and clear the drawing.
 
-** <a href="https://omar-fetooh.github.io/Etch-a-Sketch/">Live Preview </a>**
+<a href="https://omar-fetooh.github.io/Etch-a-Sketch/">Live Preview </a>
 
 ## Features
 - **Change Size:** Users can adjust the size of the drawing area.
